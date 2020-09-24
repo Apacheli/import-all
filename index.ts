@@ -22,5 +22,7 @@ const importAll = async (path: string, depth = Infinity, _ = 0) => {
     }
   }
 
-  return Promise.all(modules).then((mods) => mods.flat());
+  return (await Promise.all(modules)).flat();
 };
+
+export default importAll;
