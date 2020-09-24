@@ -6,7 +6,7 @@ import fs from 'fs/promises';
  * @arg depth How deep to recurse into subdirectories
  */
 const importAll = async (path: string, depth = Infinity, _ = 0) => {
-  const files = await fs.readdir(path, {
+  const files = await fs.readdir(new URL(path), {
     withFileTypes: true
   });
 
