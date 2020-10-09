@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Parallel import ES modules",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "build": "tsc",
-    "lint": "eslint index.ts || true",
+    "lint": "eslint index.ts",
     "lint:fix": "eslint --fix index.ts || true",
-    "prepare": "tsc"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint"
   },
   "repository": {
     "type": "git",
