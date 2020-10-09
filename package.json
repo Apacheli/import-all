@@ -4,6 +4,7 @@
   "description": "Parallel import ES modules",
   "main": "index.js",
   "files": [
+    "index.d.ts",
     "index.js"
   ],
   "scripts": {
